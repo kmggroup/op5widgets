@@ -120,6 +120,10 @@ monitors:
   Dashing.numColumns ||= 5
 ```
 
+# References
+
+* https://smashing.github.io/ 
+
 # License
 
 Distributed under the [MIT license](MIT-LICENSE).
