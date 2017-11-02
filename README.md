@@ -24,11 +24,11 @@ bundle install
 # Usage
 
 * Copy the widget directories into your ./widgets directory
-  * op5events
-  * op5hosts
-  * op5serviceack
-  * op5servicenoack
-  * op5serviceok
+  * op5hosts - Main overview
+  * op5events - Last event happening in the monitor
+  * op5serviceok - Ok Services
+  * op5serviceack - Acknowledged issues
+  * op5servicenoack - Non acknowledged issues
 
 * Copy the jobs/op5widgets.rb into your ./jobs directory
 
