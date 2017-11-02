@@ -1,0 +1,66 @@
+$bg_warn  : #FFCF00;
+$bg_down  : #694c40;
+$bg_alarm : #FF3737;
+$bg_ok : #6BE56B;
+$bg_ok_dimmed : #407324;
+
+.widget-op5hosts {
+  background: $bg_ok;
+  font-size: 25px;
+  /* font-weight: bold; */
+  #uschdiv:after {
+    color: $bg_ok_dimmed;
+    content:   "\f118";
+    opacity: 0.15;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 5%;
+    left: 12%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+}
+
+.dangerhost {
+  background: $bg_down;
+  color: white;
+  #uschdiv:after {
+    color: $bg_alarm;
+    content:     "\f071";
+    opacity: 0.4;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 5%;
+    left: 7%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+
+}
+
+.dangerservice {
+  background: $bg_ok_dimmed;
+  #uschdiv:after {
+    color: $bg_ok;
+    content: "\f119";
+    opacity: 0.2;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 5%;
+    left: 11%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+}

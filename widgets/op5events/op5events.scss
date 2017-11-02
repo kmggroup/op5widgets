@@ -1,0 +1,83 @@
+$bg_warn  : #FFCF00;
+$bg_down  : #694c40;
+$bg_alarm : #EF1D2F;
+$bg_ok : #6BE56B;
+$bg_ok_dimmed : #407324;
+
+.widget-op5events {
+  background: $bg_ok;
+  #uschdiv:after {
+    color: $bg_ok_dimmed;
+    content:     "\f001";
+    opacity: 0.1;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 10%;
+    left: 10%;
+    margin-top: -20px;
+    z-index: 1;
+  }
+}
+
+.evwarn {
+  background: $bg_warn;
+  #uschdiv:after {
+    color: $bg_alarm;
+    content:     "\f128";
+    opacity: 0.102;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 0%;
+    left: 25%;
+    margin-top: -20px;
+    z-index: 1;
+  }
+
+}
+
+.evacked {
+  background: $bg_ok_dimmed;
+  #uschdiv:after {
+    color: $bg_ok;
+    content:     "\f129";
+    opacity: 0.3;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 15%;
+    left: 35%;
+    margin-top: -20px;
+    z-index: 1;
+  }
+
+}
+
+.evdanger {
+  background: $bg_alarm;
+  #uschdiv:after {
+    color: $bg_warn;
+    content:     "\f128";
+    opacity: 0.4;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 10%;
+    left: 25%;
+    margin-top: -20px;
+    z-index: 1;
+  }
+}

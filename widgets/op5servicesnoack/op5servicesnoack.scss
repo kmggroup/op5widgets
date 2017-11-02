@@ -1,0 +1,63 @@
+$bg_ok: #50B387;
+$bg_ok_dimmed: #4B7361;
+$bg_alarm: #A31420;
+$bg_warn: #FFD730;
+$bg_ack_done: #A88520;
+
+.widget-op5servicesnoack {
+  background: $bg_ok;
+  font-size: 25px;
+  /* font-weight: bold; */
+  #uschdiv:after {
+    color: $bg_ok_dimmed;
+    content: "\f164";
+    opacity: 0.2;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 150px;
+    top: 15%;
+    right: 15%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+
+}
+.snalarm {
+  background: $bg_alarm;
+  #uschdiv:after {
+    color: $bg_warn;
+    content: "\f165";
+    opacity: 0.2;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 150px;
+    top: 15%;
+    right: 15%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+}
+.snwarn {
+  background: $bg_warn;
+  #uschdiv:after {
+    color: $bg_alarm;
+    content: "\f165";
+    opacity: 0.2;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 150px;
+    top: 15%;
+    right: 15%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+}

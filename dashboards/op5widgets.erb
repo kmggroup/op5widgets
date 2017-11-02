@@ -1,0 +1,159 @@
+<% content_for :title do %>
+    Dashboard
+<% end %>
+
+<div class="gridster" style="height: 810px; max-height: 810px;  font-family: 'Encode Sans Semi Condensed', sans-serif;">
+    <div style='background: #034B70; margin-top: 1px; margin: 4px margin-bottom: 0px;'>
+        <h1 style='padding: 5px; padding-top: 0px; margin-bottom: 7px;'>Op5 Monitoring summary</h1>
+    </div>
+    <ul>
+        <!-- =========================== -->
+        <!-- 1st column - overall status -->
+        <!-- =========================== -->
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+              <div data-id="op5_dev" data-view="Op5hosts" data-title="INT" data-url="https://dev.op5.example"
+                  data-addclass-dangerhost="hostDown"
+                  data-addclass-dangerservice="serviceDown"
+                  data-event-click="redirect">
+              </div>
+        </li>
+
+        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+            <div data-id="op5_remote" data-view="Op5hosts" data-title="remote" data-url="https://remote.op5.example"
+                 data-addclass-dangerhost="hostDown"
+                 data-addclass-dangerservice="serviceDown"
+                  data-event-click="redirect">
+            </div>
+        </li>
+
+        <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+            <div data-id="op5_production" data-view="Op5hosts" data-title="PROD" data-url="https://production.op5.example"
+                 data-addclass-dangerhost="hostDown"
+                 data-addclass-dangerservice="serviceDown"
+                  data-event-click="redirect"
+            </div>
+        </li>
+
+        <!-- =========================== -->
+        <!-- 2nd column - latest events  -->
+        <!-- =========================== -->
+
+        <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+            <div data-id="op5_int" data-view="Op5events"
+                 data-addclass-intevacked="serviceAcked"
+                 data-addclass-intevdanger="serviceCriticalNotAcked"
+                 data-addclass-intevwarn="serviceWarningNotAcked">
+            </div>
+        </li>
+
+        <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+            <div data-id="op5_remote" data-view="Op5events"
+                 data-addclass-intevacked="serviceAcked"
+                 data-addclass-intevdanger="serviceCriticalNotAcked"
+                 data-addclass-intevwarn="serviceWarningNotAcked">
+            </div>
+        </li>
+
+        <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+            <div data-id="op5_production" data-view="Op5events"
+                 data-addclass-intevacked="serviceAcked"
+                 data-addclass-intevdanger="serviceCriticalNotAcked"
+                 data-addclass-intevwarn="serviceWarningNotAcked">
+            </div>
+        </li>
+
+        <!-- =========================== -->
+        <!-- 3rd column - Services OK  -->
+        <!-- =========================== -->
+
+       <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+            <div data-id="op5_int" data-view="Op5servicesok"
+                 data-addclass-insodanger="anyProblem" data-threshold=1>
+            </div>
+        </li>
+
+       <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+            <div data-id="op5_remote" data-view="Op5servicesok"
+                 data-addclass-insodanger="anyProblem" data-threshold=1>
+            </div>
+        </li>
+
+       <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+            <div data-id="op5_production" data-view="Op5servicesok"
+                 data-addclass-insodanger="anyProblem" data-threshold=1>
+            </div>
+        </li>
+
+        <!-- =========================== -->
+        <!-- 4th column - Acknowledged  -->
+        <!-- =========================== -->
+
+        <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+            <div data-id="op5_int" data-view="Op5servicesack"
+                 data-addclass-sunackedcrit="unAckedCritical"
+                 data-addclass-sunackedwarn="unAckedWarning"
+                 data-addclass-sallacked_crit="allAckedCrit"
+                 data-addclass-sallacked_warn="allAckedWarn"
+            >
+            </div>
+        </li>
+
+        <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+            <div data-id="op5_remote" data-view="Op5servicesack"
+                 data-addclass-sunackedcrit="unAckedCritical"
+                 data-addclass-sunackedwarn="unAckedWarning"
+                 data-addclass-sallacked_crit="allAckedCrit"
+                 data-addclass-sallacked_warn="allAckedWarn"
+            >
+            </div>
+        </li>
+
+        <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+            <div data-id="op5_production" data-view="Op5servicesack"
+                 data-addclass-sunackedcrit="unAckedCritical"
+                 data-addclass-sunackedwarn="unAckedWarning"
+                 data-addclass-sallacked_crit="allAckedCrit"
+                 data-addclass-sallacked_warn="allAckedWarn"
+            >
+            </div>
+        </li>
+
+        <!-- =========================== -->
+        <!-- 5th column - Not acknowledged  -->
+        <!-- =========================== -->
+
+        <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+            <div data-id="op5_int" data-view="Op5servicesnoack"
+                 data-addclass-snalarm="anyCritical"
+                 data-addclass-snwarn="anyWarning"
+            >
+            </div>
+        </li>
+
+        <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+            <div data-id="op5_remote" data-view="Op5servicesnoack"
+                 data-addclass-snalarm="anyCritical"
+                 data-addclass-snwarn="anyWarning"
+            >
+            </div>
+        </li>
+
+        <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+            <div data-id="op5_production" data-view="Op5servicesnoack"
+                 data-addclass-snalarm="anyCritical"
+                 data-addclass-snwarn="anyWarning"
+            >
+            </div>
+        </li>
+
+
+    </ul>
+
+    <center>
+        <div style="font-size: 12px">
+     Dashboard
+        </div>
+    </center><br/>
+
+</div>

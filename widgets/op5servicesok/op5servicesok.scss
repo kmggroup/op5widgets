@@ -1,0 +1,45 @@
+$bg_ok: #50B387;
+$bg_ok_dimmed: #4B7361;
+$bg_alarm: #A31420;
+$bg_warn: #C2D414;
+$bg_ack_done: #D4A526;
+
+.widget-op5servicesok {
+  background: $bg_ok;
+  font-size: 25px;
+  /* font-weight: bold; */
+  #uschdiv:after {
+    color: $bg_ok_dimmed;
+    content: "\f164";
+    opacity: 0.3;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 150px;
+    top: 15%;
+    right: 15%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+
+}
+.sodanger {
+  background: $bg_ok_dimmed;
+  #uschdiv:after {
+    color: $bg_ok;
+    content: "\f134";
+    opacity: 0.35;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 220px;
+    top: 5%;
+    left: 18%;
+    margin: -3px 0 0 3px;
+    z-index: 1;
+  }
+}

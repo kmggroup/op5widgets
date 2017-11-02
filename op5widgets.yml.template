@@ -1,0 +1,5 @@
+monitors:
+  dev:        "https://dev.op5.example/api/"
+  remote:     "https://remote.op5.example/api/"
+  production: "https://production.op5.example/api/"
+
