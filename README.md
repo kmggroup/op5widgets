@@ -119,3 +119,8 @@ monitors:
   Dashing.widget_base_dimensions ||= [255, 235]
   Dashing.numColumns ||= 5
 ```
+
+# License
+
+Distributed under the [MIT license](MIT-LICENSE).
+
