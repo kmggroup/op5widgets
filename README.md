@@ -46,7 +46,12 @@ monitors:
   production: "https://production.op5.example/api/"
 ```
 
-* Add the widgets to your dashboard.
+* Add the widgets to your dashboard, or create a new dashboard.
+
+```
+smashing generate dashboard op5
+```
+
 * NOTE: the data-id is "op5_" + the name you give the monitor instance in op5widgets.yml
 
 ```
