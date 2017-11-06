@@ -3,7 +3,7 @@
 
 config = YAML.load File.open("op5widgets.yml")
 USERNAME  =  config["default_username"]
-USERNAME  =  config["default_password"]
+PASSWORD  =  config["default_password"]
 
 monitors  =  config["monitors"]
 data_tag  = "op5"
