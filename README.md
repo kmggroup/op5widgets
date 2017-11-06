@@ -23,6 +23,33 @@ bundle install
 
 # Usage
 
+* Extend your config/settings.rb, so that you require the needed components. Example:
+
+```
+$settings_rb_read = true
+
+require "jsonclient"
+require "active_support/all"
+require 'simple-rss'
+require 'open-uri'
+require 'syslog/logger'
+require 'econfig'
+
+class DashApp < Sinatra::Base
+  extend Econfig::Shortcut
+  Econfig.env = settings.environment.to_s
+  Econfig.root = settings.root.to_s + "/.."
+end
+
+#--- below is needed only if you want to put your secrets in a
+#--- yaml file called /config/secrets.yml
+secrets_file = Econfig.root + "/config/secrets.yml"
+config_file  = Econfig.root + "/config/config.yml"
+
+DashApp.config.backends.push  :app_secrets, Econfig::YAML.new(secrets_file)
+```
+
+
 * Copy the widget directories into your ./widgets directory
   * op5hosts - Main overview
   * op5events - Last event happening in the monitor
